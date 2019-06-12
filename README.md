@@ -1,21 +1,38 @@
-# Reading: Bearer Authorization
-
-Below is a collection of resources of varying types and lengths which describe the topics for the upcoming lecture.  As you go through the readings each day, you'll find that certain sources work better for your reading and learning style. Focus on those, but also branch out and consume the material in different forms.
-
-**For your assignment, go through these resources, and create a wiki entry in your fork of the class repo that summarizes the principle topic as though you were presenting the material to a 301 level student.**
-
-Wiki Entry Ideas:
-* Blog Article (2-3 paragraphs with code sample)
-* Dictionary / Flash Cards
-* Notes in outline form
-
-## Read
-* [intro to jwt](https://jwt.io/introduction/)
-* [are jwts secure?](https://stackoverflow.com/questions/27301557/if-you-can-decode-jwt-how-are-they-secure)
-
-## Bookmark
-* [jsonwebtoken docs](https://www.npmjs.com/package/jsonwebtoken)
-
-
-
-
+# LAB - Lab-13
+## Project Name: Bearer of Auth
+	### Author: Student/Group Name Ed, Matt, Tia, Felipe
+	
+	### Links and Resources
+	* [submission PR]()
+	* [submission PR]()
+	* [travis]()
+	* [back-end]()
+	* [front-end](http://xyz.com) (when applicable)
+#### Documentation
+* [api docs](http://xyz.com) (API servers)
+* [jsdoc](http://xyz.com) (Server assignments)
+* [styleguide](http://xyz.com) (React assignments)
+### Modules
+#### `modulename.js`
+##### Exported Values and Methods
+###### `foo(thing) -> string`
+Usage Notes or examples
+###### `bar(array) -> array`
+Usage Notes or examples
+### Setup
+#### `.env` requirements
+* `PORT` - Port Number
+* `MONGODB_URI` - URL to the running mongo instance/db
+#### Running the app
+* `npm start`
+* Endpoint: `/foo/bar/`
+  * Returns a JSON object with abc in it.
+* Endpoint: `/bing/zing/`
+  * Returns a JSON object with xyz in it.
+  
+#### Tests
+* How do you run tests?
+* What assertions were made?
+* What assertions need to be / should be made?
+#### UML
+Link to an image of the UML for your application and response to events
