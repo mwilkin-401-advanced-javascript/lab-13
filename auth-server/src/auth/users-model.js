@@ -77,7 +77,11 @@ users.methods.generateToken = function(type) {
     options = {expiresIn: '15m'};
   }
   
-  return jwt.sign(token, process.env.SECRET);
+  return jwt.sign(tokenDat, process.env.SECRET, options);
+};
+
+users.methods.generateKey = function() {
+  return this.generateToken('key');
 };
 
 module.exports = mongoose.model('users', users);
