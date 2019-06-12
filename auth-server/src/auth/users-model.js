@@ -65,12 +65,17 @@ users.methods.comparePassword = function(password) {
     .then( valid => valid ? this : null);
 };
 
-users.methods.generateToken = function() {
+users.methods.generateToken = function(type) {
   
-  let token = {
+  let tokenDat = {
     id: this._id,
-    role: this.role,
+    capabilities: this.role,
+    type: type || 'user',
   };
+  let options = {};
+  if(tokenDat.type === 'user'){
+    options = {expiresIn: '15m'};
+  }
   
   return jwt.sign(token, process.env.SECRET);
 };
