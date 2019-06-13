@@ -20,7 +20,6 @@ module.exports = (req, res, next) => {
     next(e);
   }
   
-  
   function _authBasic(str) {
     // str: am9objpqb2hubnk=
     let base64Buffer = Buffer.from(str, 'base64'); // <Buffer 01 02 ...>
@@ -34,7 +33,7 @@ module.exports = (req, res, next) => {
   }
 
   function _authBearer(authString){
-    return Used.authenticateBearer(authString)
+    return User.authenticateBearer(authString)
     .then(user => _authenticate(user))
     .catch(next);
   }
