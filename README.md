@@ -1,12 +1,12 @@
 # LAB - Lab-13
 ## Project Name: Bearer of Auth
-	### Author: Student/Group Name Ed, Matt, Tia, Felipe
+	### Author: Student/Group Name Ed, Matt
 	
 	### Links and Resources
+	* [submission PR](https://github.com/yourname-401-advanced-javascript/lab-13/pull/1)
 	* [submission PR]()
-	* [submission PR]()
-	* [travis]()
-	* [back-end]()
+	* [travis](https://travis-ci.com)
+	* [back-end](https://glacial-cove-89523.herokuapp.com)
 	* [front-end](http://xyz.com) (when applicable)
 #### Documentation
 * [api docs](http://xyz.com) (API servers)
