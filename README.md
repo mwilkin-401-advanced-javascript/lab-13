@@ -21,8 +21,17 @@ Usage Notes or examples
 Usage Notes or examples
 ### Setup
 #### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+* `PORT=3000
+* MONGODB_URI=MONGODB_URI=mongodb://localhost:27017/file
+
+* GOOGLE_CLIENT_ID= your google client Id
+
+* GOOGLE_CLIENT_SECRET= your client secret
+
+* SECRET=pseudotsuga_menziesii
+* SINGLE_USE_TOKEN=true
+
+* EXPIRE_TIME=15m
 #### Running the app
 * `npm start`
 * Endpoint: `/foo/bar/`

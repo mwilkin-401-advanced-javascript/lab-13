@@ -1,5 +1,5 @@
 PORT=3000
-MONGODB_URI=MONGODB_URI=mongodb://localhost:27017/class-13
+MONGODB_URI=MONGODB_URI=mongodb://localhost:27017/file
 
 GOOGLE_CLIENT_ID= 
 
