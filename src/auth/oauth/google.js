@@ -5,7 +5,7 @@ const Users = require('../users-model.js');
 
 /**
 * @function - authorize
-* @param req 
+* @param req
 * @desc allows user to authorize with google oauth
  */
 
