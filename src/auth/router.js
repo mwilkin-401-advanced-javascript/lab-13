@@ -7,7 +7,7 @@ const User = require('./users-model.js');
 const auth = require('./middleware.js');
 const oauth = require('./oauth/google.js');
 
-authRouter.get('/', (req, res, next) => {
+authRouter.get('/', (req, res) => {
   res.status(200).send('Server up...');
 });
 
@@ -30,7 +30,7 @@ authRouter.post('/key', auth, (req, res, next) => {
   next();
 });
 
-authRouter.get('/signin', auth, (req, res, next) => {
+authRouter.get('/signin', auth, (req, res) => {
   res.cookie('auth', req.token);
   res.send(req.token);
 });
@@ -43,7 +43,7 @@ authRouter.get('/oauth', (req,res,next) => {
     .catch(next);
 });
 
-authRouter.post('/key', auth, (req, res, next) => {
+authRouter.post('/key', auth, (req, res) => {
   res.cookie('auth', req.token);
   res.status(200).send(req.token);
 });

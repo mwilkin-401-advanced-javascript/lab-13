@@ -19,14 +19,11 @@ beforeAll(supergoose.startDB);
 afterAll(supergoose.stopDB);
 
 describe('Auth Router', () => {
-  
   Object.keys(users).forEach( userType => {
-    
     describe(`${userType} users`, () => {
-      
+      // eslint-disable-next-line no-unused-vars
       let encodedToken;
       let id;
-      
       it('can create one', () => {
         return mockRequest.post('/signup')
           .send(users[userType])
@@ -46,9 +43,6 @@ describe('Auth Router', () => {
             expect(token.id).toEqual(id);
           });
       });
-
     });
-    
   });
-  
 });

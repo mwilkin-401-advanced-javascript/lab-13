@@ -17,7 +17,7 @@ beforeAll(async (done) => {
   const adminUser = await new Users(users.admin).save();
   const editorUser = await new Users(users.editor).save();
   const userUser = await new Users(users.user).save();
-  done()
+  done();
 });
 
 afterAll(supergoose.stopDB);
@@ -49,7 +49,7 @@ describe('Auth Middleware', () => {
           expect(next).toHaveBeenCalledWith(errorObject);
         });
 
-    }); // it()
+    });
 
     it('logs in an admin user with the right credentials', () => {
 
@@ -68,7 +68,7 @@ describe('Auth Middleware', () => {
           expect(next).toHaveBeenCalledWith();
         });
 
-    }); // it()
+    });
     
   });
 
