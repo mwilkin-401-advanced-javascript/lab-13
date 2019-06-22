@@ -1,47 +1,81 @@
-# LAB - Lab-13
-## Project Name: Bearer of Auth
-	### Author: Student/Group Name Ed, Matt, Tia, Felipe
-	
-	### Links and Resources
-	* [submission PR]()
-	* [submission PR]()
-	* [travis]()
-	* [back-end]()
-	* [front-end](http://xyz.com) (when applicable)
-#### Documentation
-* [api docs](http://xyz.com) (API servers)
-* [jsdoc](http://xyz.com) (Server assignments)
-* [styleguide](http://xyz.com) (React assignments)
-### Modules
-#### `modulename.js`
-##### Exported Values and Methods
-###### `foo(thing) -> string`
-Usage Notes or examples
-###### `bar(array) -> array`
-Usage Notes or examples
+# LAB - Lab-13 Bearer of Auth
+### Author: Student/Group Name Ed & Matt
+
+[![Build Status](https://www.travis-ci.com/mwilkin-401-advanced-javascript/lab-13.svg?branch=dev)](https://www.travis-ci.com/mwilkin-401-advanced-javascript/lab-13)
+
+### Author: Matt Wilkin and Ed DeArment
+
+### Description
+
+Create an event driven “smart app”
+
+### Links and Resources
+
+* [Submission PR](https://github.com/mwilkin-401-advanced-javascript/lab-13/pull/1)
+
+* [Travis](https://www.travis-ci.com/mwilkin-401-advanced-javascript/lab-13
+
+
+### Documentation
+
+* [JSDOC] put `index.html` in an open web browser
+
+* [UML](https://drive.google.com/open?id=1s3xvLos7ODFcZLznjstf3Q6L61zImFuD)
+
+#### Dependencies
+* jest
+
+* eslint
+
+* cors
+
+* bcrypt
+
+* debug
+
+* dotenv
+
+* express
+
+* jsonwebtoken
+
+* mongodb-memory-server
+
+* mongoose
+
+* mongoose-schema-jsonschema
+
+* morgan
+
+* swagger-ui-express
+
+* require-directory
+
+* supertest
+
+
+
+* Modules
+
+
+Exported Values and Methods
+
 ### Setup
-#### `.env` requirements
-* `PORT=3000
-* MONGODB_URI=MONGODB_URI=mongodb://localhost:27017/file
 
-* GOOGLE_CLIENT_ID= your google client Id
+Running the app
 
-* GOOGLE_CLIENT_SECRET= your client secret
+`npm start`
 
-* SECRET=pseudotsuga_menziesii
-* SINGLE_USE_TOKEN=true
+### Tests
+How do you run tests?
 
-* EXPIRE_TIME=15m
-#### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
-  
-#### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
-#### UML
-Link to an image of the UML for your application and response to events
+`npm test`
+
+What assertions were made?
+What assertions need to be / should be made?
+
+_________________
+_________________
+
+Project Guidelines
+
