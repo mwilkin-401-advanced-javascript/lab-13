@@ -11,6 +11,15 @@ authRouter.get('/', (req, res) => {
   res.status(200).send('Server up...');
 });
 
+/**
+ * Sign up a user
+ * @route POST / signup
+ * @param req - request
+ * @param res - response
+ * @param next - next middleware
+ * @returns {Object} request token
+ * @returns {Error} error
+ */
 
 authRouter.post('/signup', (req, res, next) => {
   let user = new User(req.body);
@@ -24,16 +33,47 @@ authRouter.post('/signup', (req, res, next) => {
     }).catch(next);
 });
 
+/**
+ * Create a key
+ * @route POST / key
+ * @param auth - authorization protected route
+ * @param req - request
+ * @param res - response
+ * @param next - next middleware
+ * @returns {Object} 200 - key
+ *
+ */
+
 authRouter.post('/key', auth, (req, res, next) => {
   let key = req.user.generateKey();
   res.status(200).send(key);
   next();
 });
 
+/**
+ * Get a token for the user
+ * @route GET / signin
+ * @param auth - authorization protected route
+ * @param req - request
+ * @param res - response
+ * @returns {Object} req.token
+ *
+ */
+
 authRouter.get('/signin', auth, (req, res) => {
   res.cookie('auth', req.token);
   res.send(req.token);
 });
+
+/**
+ * Get oauth from google
+ * @route GET / oauth
+ * @param req - request
+ * @param res - response
+ * @param next - next middleware
+ * @returns {Object} 200 - token
+ *
+ */
 
 authRouter.get('/oauth', (req,res,next) => {
   oauth.authorize(req)
@@ -43,9 +83,5 @@ authRouter.get('/oauth', (req,res,next) => {
     .catch(next);
 });
 
-authRouter.post('/key', auth, (req, res) => {
-  res.cookie('auth', req.token);
-  res.status(200).send(req.token);
-});
 
 module.exports = authRouter;

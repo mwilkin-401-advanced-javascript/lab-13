@@ -4,7 +4,8 @@ process.env.SECRET='test';
 
 const jwt = require('jsonwebtoken');
 
-const server = require('../../../auth-server/src/auth/router').server;
+const server = require('../../../src/app.js').server;
+// const server = require('../../../src/auth/router.js').server;
 const supergoose = require('../../supergoose.js');
 
 const mockRequest = supergoose.server(server);
