@@ -7,17 +7,22 @@ const User = require('./users-model.js');
 const auth = require('./middleware.js');
 const oauth = require('./oauth/google.js');
 
-// authRouter.post('/signup', (req, res, next) => {
-//   let user = new User(req.body);
-//   user.save()
-//     .then( (user) => {
-//       req.token = user.generateToken();
-//       req.user = user;
-//       res.set('token', req.token);
-//       res.cookie('auth', req.token);
-//       res.send(req.token);
-//     }).catch(next);
-// });
+authRouter.get('/', (req, res, next) => {
+  res.status(200).send('Server up...');
+});
+
+
+authRouter.post('/signup', (req, res, next) => {
+  let user = new User(req.body);
+  user.save()
+    .then( (user) => {
+      req.token = user.generateToken();
+      req.user = user;
+      res.set('token', req.token);
+      res.cookie('auth', req.token);
+      res.send(req.token);
+    }).catch(next);
+});
 
 authRouter.post('/key', auth, (req, res, next) => {
   let key = req.user.generateKey();
@@ -36,6 +41,11 @@ authRouter.get('/oauth', (req,res,next) => {
       res.status(200).send(token);
     })
     .catch(next);
+});
+
+authRouter.post('/key', auth, (req, res, next) => {
+  res.cookie('auth', req.token);
+  res.status(200).send(req.token);
 });
 
 module.exports = authRouter;

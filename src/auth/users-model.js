@@ -36,6 +36,7 @@ users.statics.createFromOauth = function(email) {
       console.log('Creating new user');
       let username = email;
       let password = 'none';
+      console.error(error);
       return this.create({username, password, email});
     });
 
@@ -48,6 +49,18 @@ users.statics.authenticateBasic = function(auth) {
     .catch(error => {throw error;});
 };
 
+users.statics.authenticateKey = function(token) {
+  const parsedKey = jwt.verify(token, process.env.SECRET);
+  console.log('parsedKey:', parsedKey);
+  let { id } = parsedKey;
+  // Sends back user and key rather than only user
+  return this.findById(id)
+    .then(user => ({ user, key: parsedKey }))
+    .catch(error => {
+      throw error;
+    });
+};
+
 users.statics.authenticateBearer = function(token) {
   if(usedTokens.has(token)){
     return Promise.reject('Invalid Token!');
@@ -58,7 +71,7 @@ users.statics.authenticateBearer = function(token) {
 
   let query = {_id: parsedToken.id};
   return this.findOne(query);
-}
+};
 
 users.methods.comparePassword = function(password) {
   return bcrypt.compare( password, this.password )
@@ -66,7 +79,6 @@ users.methods.comparePassword = function(password) {
 };
 
 users.methods.generateToken = function(type) {
-  
   let tokenDat = {
     id: this._id,
     capabilities: this.role,
@@ -76,7 +88,6 @@ users.methods.generateToken = function(type) {
   if(tokenDat.type === 'user'){
     options = {expiresIn: '15m'};
   }
-  
   return jwt.sign(tokenDat, process.env.SECRET, options);
 };
 
