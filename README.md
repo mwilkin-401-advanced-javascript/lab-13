@@ -1,5 +1,4 @@
 # LAB - Lab-13 Bearer of Auth
-### Author: Student/Group Name Ed & Matt
 
 [![Build Status](https://www.travis-ci.com/mwilkin-401-advanced-javascript/lab-13.svg?branch=dev)](https://www.travis-ci.com/mwilkin-401-advanced-javascript/lab-13)
 
