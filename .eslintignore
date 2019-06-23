@@ -3,3 +3,5 @@
 **/*.min.js
 **/coverage/*
 **/build/*
+**/__tests__/*
+**/docs/*

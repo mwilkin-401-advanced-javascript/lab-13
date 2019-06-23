@@ -1,0 +1,11 @@
+PORT=3000
+MONGODB_URI=MONGODB_URI=mongodb://localhost:27017/file
+
+GOOGLE_CLIENT_ID= 
+
+GOOGLE_CLIENT_SECRET= 
+
+SECRET=pseudotsuga_menziesii
+SINGLE_USE_TOKEN=true
+
+EXPIRE_TIME=15m
