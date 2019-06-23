@@ -14,7 +14,9 @@ Create an event driven “smart app”
 
 * [Travis](https://www.travis-ci.com/mwilkin-401-advanced-javascript/lab-13
 
-* [Swagger] (http://localhost:3000/api-docs/api-docs)
+* [Swagger] (http://localhost:3000/api-docs)
+
+* [JSDOC] (http://localhost:3000/docs)
 
 ### Documentation
 
